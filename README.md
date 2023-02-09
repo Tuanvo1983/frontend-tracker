@@ -1,15 +1,14 @@
-# Frontend Tracker
+ Frontend Tracker
 
 ![GitHub version](https://badge.fury.io/gh/Pgyer%2Ffrontend-tracker.svg)
 ![Bower version](https://badge.fury.io/bo/frontend-tracker.svg)
 ![npm version](https://badge.fury.io/js/frontend-tracker.svg)
 
 
-## Intro to Frontend Tracker
+Intro to Frontend Tracker
 
 Sending frontend error to server. Get frontend error before Issue created.
-
-### Highlight
+Highlight
 1. Get frontend error when occurred
 1. Logging script error
 1. Logging XHR request error
@@ -19,8 +18,7 @@ Sending frontend error to server. Get frontend error before Issue created.
 1. Logging resource loading error
 1. Logging cross origin resource loading
 1. Config URL with regular expression
-
-## Installation
+Installation
 
 Use Bower
 
@@ -35,8 +33,7 @@ or directly download the ZIP archive to get frontend-tracker.
 then add into the page you want to inspect errors.
 
     <script src="path/to/package/dist/tracker.min.js">
-
-## Configuration
+Configuration
 
 Add following code into your html file to start and config Frontend Tracker.
 
@@ -79,17 +76,12 @@ Add following code into your html file to start and config Frontend Tracker.
   })
   </script>
 ```
-
-### Options
-
-#### endpoint
+Optionsendpoint
 
     String
     Required
 
-URL or URI to post error message.
-
-#### xhr
+URL or URI to post error message.xhr
 
     Object
     Required
@@ -109,8 +101,7 @@ An object to config when XHR error occurred.
 | timeLimit.load | int, Default: 0 | XHR loading time threshold. `0` is no limit  (ms) |
 | timeLimit.total | int, Default: 0 | XHR total request time threshold. `0` is no limit (ms) |
 | exclude | Optional, Array | Set ignore path, both Sting and Regular expression accepted |
-
-#### resource
+ resource
 
     Object
     Required
@@ -124,8 +115,7 @@ An object to config when resource error occurred.
 | log.error | Required, Boolean, Default: `false` | Capture resource error event if set to `true` |
 | origin | Optional, Array | Set Origin, both Sting and Regular expression accepted |
 | exclude | Optional, Array | Set ignore path, both Sting and Regular expression accepted |
-
-#### script
+script
 
 Object
 Required
@@ -137,12 +127,10 @@ An object to config when script error occurred.
 | log | Required, Object  | Object to config log capture |
 | log.error | Required, Boolean, Default: `false` | Capture script error event if set to `true` |
 | exclude | Optional, Array | Set ignore filename, both Sting and Regular expression accepted |
-
-## Handling Error Message
+Handling Error Message
 
 An error message in JSON format will post to endpoint when errors occurred.
-
-### Fields
+Fields
 
 | name | value | description |
 | :-- | :-- | :-- |
@@ -160,6 +148,5 @@ Error message can be get from `data.message`. Detail error data can be get via p
 | SCRIPT | {file: String, line: int, column: int, trace: String} | `file`: script filename, `line`: line number of error script, `column`: column number of error script, `trace`: stack trace of error |
 
 
-
-## License
+ License
 Frontend Tracker is [GPL-3 licensed](LICENSE).
